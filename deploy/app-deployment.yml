@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: minikube-simple-app
+  labels:
+    app: minikube-simple-app
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: minikube-simple-app
+  template:
+    metadata:
+      labels:
+        app: minikube-simple-app
+    spec:
+      containers:
+        - name: minikube-simple-app
+          image: "241442071922.dkr.ecr.us-west-2.amazonaws.com/test"
