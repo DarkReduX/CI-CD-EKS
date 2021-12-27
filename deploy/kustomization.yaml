@@ -3,3 +3,6 @@ kind: Kustomization
 resources:
 - app-deployment.yml
 - app-service.yml
+images:
+- name: 241442071922.dkr.ecr.us-west-2.amazonaws.com/test
+  newTag: 924775fcff730ab56a5cadda46b274802f228bed
